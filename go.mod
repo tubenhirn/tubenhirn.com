@@ -1,4 +1,4 @@
-module tubenhirn.com
+module gitlab.com/jstang/tubenhirn.com
 
 go 1.18
 
