@@ -4,6 +4,7 @@
 
 baseURL = "https://tubenhirn.com/"
 defaultContentLanguage = "en"
+theme = "congo"
 
 enableRobotsTXT = true
 paginate = 10
