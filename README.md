@@ -1,3 +1,3 @@
 # a simple hugo based project
 
-provides everything for tubenhirn.com
+provides everything for https://tubenhirn.com
