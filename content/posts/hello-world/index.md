@@ -1,7 +1,7 @@
 ---
 title: "hello world :tada:"
 description: "here I am!"
-tags: ["develop", "hello"]
+tags: ["develop", "hello", "first", "hello-world"]
 date : "2022-05-26"
 ---
 
