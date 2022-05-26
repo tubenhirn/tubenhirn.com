@@ -1,11 +1,11 @@
 ---
-title: testing with locust and bigquery
+title: testing with locust
 description:
 tags: ["locust", "k8s", "load-testing", "performance", "test", "python", "gcp", "google-cloud", "bigquery"]
 date : "2022-05-26"
 ---
 
-As a developer, I wanted to know how good my new application is doing under load and how changes to the code-base
+As a dev-team, we wanted to know how good our new application is doing under load and how changes to the code-base
 or the infrastructure affects the response time.
 
 We decided to look out for a load-testing solution that was able to create a high amount of load when we need it.
