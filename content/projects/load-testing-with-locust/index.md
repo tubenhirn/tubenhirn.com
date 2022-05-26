@@ -1,6 +1,6 @@
 ---
-title: testing with locust
-description:
+title: "testing with locust"
+description: "testing web-app response time with locust and pushing the results to bigquery"
 tags: ["locust", "k8s", "load-testing", "performance", "test", "python", "gcp", "google-cloud", "bigquery"]
 date : "2022-05-26"
 ---
@@ -33,3 +33,13 @@ A[Locust]-->B[Google-Bucket];
 B-->C[Big-Query]
 C-->D[Data-Studio]
 {{< /mermaid >}}
+
+## used tools and technologies
+
+- google cloud platform
+- BigQuery
+- Google Data Studio
+- Google Kubernetes Engine
+- Google CloudFunctions
+- Locust (https://locust.io/)
+- Terraform
