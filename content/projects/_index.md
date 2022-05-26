@@ -1,4 +1,4 @@
 ---
-title: "my projects"
+title: "projects"
 description: "latests projects overview"
 ---

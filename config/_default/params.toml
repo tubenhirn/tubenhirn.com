@@ -24,7 +24,7 @@ showScrollToTop = true
 
 [article]
   showDate = true
-  showDateUpdated = false
+  showDateUpdatea = true
   showAuthor = true
   showBreadcrumbs = false
   showDraftLabel = true
