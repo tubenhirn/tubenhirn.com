@@ -2,7 +2,7 @@
 title: "Scheduled lighthouse testing"
 description: "Use scheduled Gitlab pipelines to trigger lighthouse performance tests"
 tags: ["test", "lighthouse", "ci/cd", "cloud-sql", "gcp", "performance", "gitlab.com", "k8s"]
-date : "2022-05-26"
+date : "2021-12-01"
 ---
 
 Using lighthouse-ci together with Gitlab pipelines and custom Kubernetes runners

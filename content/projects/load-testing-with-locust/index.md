@@ -2,7 +2,7 @@
 title: "Automated load testing with locust"
 description: "Testing a web-application's response time with locust and pushing the results to bigquery"
 tags: ["locust", "k8s", "load-testing", "performance", "test", "python", "gcp", "google-cloud", "bigquery"]
-date : "2022-05-26"
+date : "2020-01-15"
 ---
 
 As a dev-team, we wanted to know how good our new application is doing under load and how changes to the code-base
