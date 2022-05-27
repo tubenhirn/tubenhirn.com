@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 
 [author]
   name = "Johannes Stang"
-  # image = "img/author.jpg"
+  image = "img/not_me.jpg"
   headline = "Developer developing things."
   # bio = "nothing here"
   links = [
