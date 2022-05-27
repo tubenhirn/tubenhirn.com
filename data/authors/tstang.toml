@@ -1,22 +1,7 @@
-languageCode = "en"
-languageName = "English"
-displayName = "EN"
-isoCode = "en"
-weight = 1
-rtl = false
-
-title = "tubenhirn.com"
-# logo = "img/logo.jpg"
-description = "tubenhirn.com"
-copyright = "2022 © Johannes Stang. All Right Reserved."
-
-dateFormat = "2 January 2006"
-[author]
-  name = "Johannes Stang"
-  image = "img/jstang.jpg"
-  headline = "Developer, developing things."
-  # bio = "nothing here"
-  links = [
+name = "Tina Stang"
+image = "img/tstang.jpg"
+bio = "Love UX/UI and HIIT"
+links = [
     # { email = "mailto:hello@your_domain.com" },
     # { link = "https://link-to-some-website.com/" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
@@ -30,10 +15,10 @@ dateFormat = "2 January 2006"
     # { flickr = "https://www.flickr.com/photos/username/" },
     # { foursquare = "https://foursquare.com/username" },
     # { github = "https://github.com/username" },
-    { gitlab = "https://gitlab.com/jstang" },
+    # { gitlab = "https://gitlab.com/username" },
     # { google = "https://www.google.com/" },
     # { hashnode = "https://username.hashnode.dev" },
-    # { instagram = "https://instagram.com/username" },
+    { instagram = "https://instagram.com/vonderstang_e" },
     # { keybase = "https://keybase.io/username" },
     # { kickstarter = "https://www.kickstarter.com/profile/username" },
     # { lastfm = "https://lastfm.com/user/username" },
@@ -55,7 +40,7 @@ dateFormat = "2 January 2006"
     # { tiktok = "https://tiktok.com/@username" },
     # { tumblr = "https://username.tumblr.com" },
     # { twitch = "https://twitch.tv/username" },
-    { twitter = "https://twitter.com/tubenhirn" },
+    # { twitter = "https://twitter.com/tubenhirn" },
     # { whatsapp = "https://wa.me/phone-number" },
     # { youtube = "https://youtube.com/username" },
-  ]
+]

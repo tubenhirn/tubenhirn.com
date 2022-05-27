@@ -3,3 +3,5 @@
 # topic = "topics"
 #
 tag = "tags"
+category = "categories"
+author = "authors"

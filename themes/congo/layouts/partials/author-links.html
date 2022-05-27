@@ -1,4 +1,5 @@
-{{ with .Site.Author.links }}
+{{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+{{ with $author.links }}
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
     {{ range $links := . }}
       {{ range $name, $url := $links }}
