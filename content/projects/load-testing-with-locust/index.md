@@ -34,6 +34,8 @@ B-->C[Big-Query]
 C-->D[Data-Studio]
 {{< /mermaid >}}
 
+---
+
 ## used tools and technologies
 
 - google cloud platform
