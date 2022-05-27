@@ -38,7 +38,7 @@ showScrollToTop = true
   showTableOfContents = false
   showTaxonomies = true
   showWordCount = false
-  sharingLinks = ["twitter", "email"]
+  # sharingLinks = ["twitter", "email"]
 
 [list]
   showBreadcrumbs = false
