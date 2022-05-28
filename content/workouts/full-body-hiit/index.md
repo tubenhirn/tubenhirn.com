@@ -1,6 +1,6 @@
 ---
 title: "Full Body, 14 exercises, 2 rounds"
-categories: ["hiit", "full body", "50/10", "2 rounds"]
+categories: ["hiit", "full body", "50/10", "2 rounds", "jumping"]
 date: "2022-05-27"
 author: "tstang"
 ---
