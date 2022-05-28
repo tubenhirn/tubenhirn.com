@@ -26,7 +26,7 @@
       </h2>
     {{ end }}
     <div class="mt-1 text-2xl">
-      {{ partialCached "author-links.html" . }}
+      {{ partial "author-links.html" . }}
     </div>
   </header>
   <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>

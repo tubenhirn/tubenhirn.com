@@ -6,5 +6,3 @@ description: "a developer, developing things"
 {{< button href="https://tubenhirn.com/monitor" >}}
 some monitoring test :fire:
 {{< /button >}}
-
-## more to come...
