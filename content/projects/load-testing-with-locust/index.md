@@ -18,8 +18,8 @@ When the tests are finished you can export a result in different file formats. W
 
 The next step was to put the results in a time series.
 
-We created a Big-Query dataset that represents the load-test result.
-A Cloud-Function is used to import the results into the dataset so we can use them for our review.
+We created a BigQuery dataset that represents the load-test result.
+A CloudFunction is used to import the results into the dataset so we can use them for our review.
 
 Last was a report made with Data-Studio that is linked to the dataset in Big-Query.
 This report updates every time a new result was pushed to the dataset.
@@ -30,7 +30,7 @@ while it is under constant development.
 {{< mermaid >}}
 graph LR;
 A[Locust]-->B[Google-Bucket];
-B-->C[Big-Query]
+B-->C[BigQuery]
 C-->D[Data-Studio]
 {{< /mermaid >}}
 
