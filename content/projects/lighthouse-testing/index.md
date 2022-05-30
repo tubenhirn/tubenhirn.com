@@ -10,10 +10,10 @@ Using lighthouse-ci together with Gitlab pipelines and custom Kubernetes runners
 to be able to test every feature-branch of an given application.
 
 The constant flow of changes and new features has an hughe impact on the measured
-performance-index sometimes. So testing a feature-branch early, gives you a good insight 
+performance-index sometimes. So testing a feature-branch early, gives you a good insight
 on how the changes will impact on the overall score.
- 
-You can modify your code again, making crucial modifications or small tweaks 
+
+You can modify your code again, making crucial modifications or small tweaks
 before the new feature gets shipped to the customer.
 
 ---
