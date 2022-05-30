@@ -1,6 +1,6 @@
 ---
-title: "delivery automation with keptn"
-description: "delivery process with automated quality gates by keptn"
+title: "Delivery automation with keptn"
+description: "Delivery process with automated quality gates by keptn"
 date: "2021-08-13"
 tags: ["gitlab-ci", "keptn", "ci/cd", "k8s", "gcp"]
 ---
