@@ -38,6 +38,16 @@ stern istio-ingressgateway -o raw -n istio-system \
     by user_agent, authority'
 {{< /highlight >}}
 
+### count all requests filtered by authority, group the lines by user_agent
+
+{{< highlight bash >}}
+stern istio-ingressgateway -o raw -n istio-system \
+    | agrind 'start_time | json
+    | where authority == "tubenhirn.com"
+    | count
+    by user_agent'
+{{< /highlight >}}
+
 ## used tools
 
 - angle-grinder (https://github.com/rcoh/angle-grinder)
