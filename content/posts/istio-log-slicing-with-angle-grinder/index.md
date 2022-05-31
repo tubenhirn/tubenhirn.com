@@ -10,6 +10,11 @@ I love the combindation of `stern` and `angle-grinder` to gain an quick overview
 
 I'll give you a short overview of statements I use often.
 
+{{< alert >}}
+the given examples filter all stern results for `start_time` to drop unnecessary logs
+you can also use `agrind '* | ...'`
+{{< /alert >}}
+
 ### calculate the p95 and max for upstream_service_time, group the lines by path
 
 {{< highlight bash >}}
@@ -18,7 +23,6 @@ stern istio-ingressgateway -o raw -n istio-system \
     | count, p95(upstream_service_time), max(upstream_service_time)
     by path'
 {{< /highlight >}}
-
 ### filter for response_code 5xx, group lines by response_code
 
 {{< highlight bash >}}
