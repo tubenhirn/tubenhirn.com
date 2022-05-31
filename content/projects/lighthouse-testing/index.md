@@ -1,7 +1,7 @@
 ---
 title: "Scheduled lighthouse testing"
 description: "Use scheduled Gitlab pipelines to trigger lighthouse performance tests"
-tags: ["test", "lighthouse", "ci/cd", "cloud-sql", "gcp", "performance", "gitlab.com", "k8s"]
+tags: ["test", "lighthouse", "ci/cd", "cloud-sql", "gcp", "performance", "gitlab-ci", "k8s"]
 date : "2021-12-01"
 author: "jstang"
 ---
