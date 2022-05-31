@@ -15,7 +15,7 @@ the given examples filter all stern results for `start_time` to drop unnecessary
 you can also use `agrind '* | ...'`
 {{< /alert >}}
 
-### ingress logs, p95 and max for upstream_service_time, group the lines by path
+### ingress logs, p95 and max for upstream_service_time, grouped by path
 
 {{< highlight bash >}}
 stern istio-ingressgateway -o raw -n istio-system \
@@ -24,7 +24,7 @@ stern istio-ingressgateway -o raw -n istio-system \
     by path'
 {{< /highlight >}}
 
-### ingress logs, filtered for response_code 5xx, group lines by response_code
+### ingress logs, filtered for response_code 5xx, grouped by response_code
 
 {{< highlight bash >}}
 stern istio-ingressgateway -o raw -n istio-system \
@@ -43,7 +43,7 @@ stern istio-ingressgateway -o raw -n istio-system \
     by user_agent, authority'
 {{< /highlight >}}
 
-### ingress logs, filtered by authority, group the lines by user_agent
+### ingress logs, filtered by authority, grouped by user_agent
 
 {{< highlight bash >}}
 stern istio-ingressgateway -o raw -n istio-system \
@@ -53,7 +53,7 @@ stern istio-ingressgateway -o raw -n istio-system \
     by user_agent'
 {{< /highlight >}}
 
-### istiod logs, group lines by level
+### istiod logs, grouped by level
 
 {{< highlight bash >}}
 stern istiod -o raw -n istio-system \
