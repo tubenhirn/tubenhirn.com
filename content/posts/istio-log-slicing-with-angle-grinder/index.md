@@ -15,7 +15,7 @@ the given examples filter all stern results for `start_time` to drop unnecessary
 you can also use `agrind '* | ...'`
 {{< /alert >}}
 
-### calculate the p95 and max for upstream_service_time, group the lines by path
+### ingress logs, p95 and max for upstream_service_time, group the lines by path
 
 {{< highlight bash >}}
 stern istio-ingressgateway -o raw -n istio-system \
@@ -23,7 +23,8 @@ stern istio-ingressgateway -o raw -n istio-system \
     | count, p95(upstream_service_time), max(upstream_service_time)
     by path'
 {{< /highlight >}}
-### filter for response_code 5xx, group lines by response_code
+
+### ingress logs, filtered for response_code 5xx, group lines by response_code
 
 {{< highlight bash >}}
 stern istio-ingressgateway -o raw -n istio-system \
@@ -33,7 +34,7 @@ stern istio-ingressgateway -o raw -n istio-system \
     by response_code'
 {{< /highlight >}}
 
-### count all requests, group by user_agent and authority
+### ingress logs, grouped by user_agent and authority
 
 {{< highlight bash >}}
 stern istio-ingressgateway -o raw -n istio-system \
@@ -42,7 +43,7 @@ stern istio-ingressgateway -o raw -n istio-system \
     by user_agent, authority'
 {{< /highlight >}}
 
-### count all requests filtered by authority, group the lines by user_agent
+### ingress logs, filtered by authority, group the lines by user_agent
 
 {{< highlight bash >}}
 stern istio-ingressgateway -o raw -n istio-system \
@@ -50,6 +51,15 @@ stern istio-ingressgateway -o raw -n istio-system \
     | where authority == "tubenhirn.com"
     | count
     by user_agent'
+{{< /highlight >}}
+
+### istiod logs, group lines by level
+
+{{< highlight bash >}}
+stern istiod -o raw -n istio-system \
+    | agrind '* | json
+    | count
+    by level'
 {{< /highlight >}}
 
 ## used tools
