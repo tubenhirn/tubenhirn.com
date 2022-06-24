@@ -9,4 +9,4 @@ see **/terraform** for details.
 
 ### dagger
 
-terraform code is run with dagger (https://dagger.io).\
+terraform code is run with dagger (https://dagger.io).
