@@ -15,7 +15,7 @@ Combine `renovate` with `dagger` and you get a full managed CI/CD pipeline that 
 Dagger is a "portable devkit for CI/CD pipelines".\
 (for more details check the docs here https://docs.dagger.io/1200/local-dev)
 
-It uses docker to run portable job containers and is configured with cuelang.
+It uses docker to run portable job containers and is configured with `cue`.
 
 I think it is the perfect match for developer task automation and it can be used in\
 almost every environment.
@@ -56,7 +56,7 @@ our jobs we want to run in this project.
 touch ci.cue
 {{< /highlight >}}
 
-As said earlier dagger uses cuelang (a JSON superset) to describe\
+As said earlier dagger uses `cue` (a JSON superset) to describe\
 what we to do.
 
 Example:
@@ -92,4 +92,5 @@ dagger do build
 
 - dagger (https://dagger.io/)
 - renovate (https://github.com/renovatebot/renovate)
+- cue (https://cuelang.org/)
 
