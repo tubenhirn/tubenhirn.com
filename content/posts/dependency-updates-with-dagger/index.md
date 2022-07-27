@@ -17,8 +17,13 @@ Dagger is a "portable devkit for CI/CD pipelines".\
 
 It uses docker to run portable job containers and is configured with cuelang.
 
-For me it is the perfect match for developer task automation and it can be used in\
+I think it is the perfect match for developer task automation and it can be used in\
 almost every environment.
+
+When you are used to CI/CD tools like `gitlab` or `github actions` you may be aware of the\
+try and error commit/push loops when developing new pipelines or jobs.\
+Dagger can be run on your local machine and speeds up the feedback cycle when developing new\
+stuff.
 
 ### whats renovate
 
@@ -31,6 +36,11 @@ You can easily get it from dockerhub in the latest version.
 
 ## how I use both tools together
 
+### setup dagger
+
+### setup renovate
+
+### run the renovate job
 
 ## used tools
 
