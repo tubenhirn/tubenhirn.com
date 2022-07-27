@@ -3,7 +3,7 @@ title: "automate dependency updates with dagger"
 description: "automate project dependency updates with renovate and dagger"
 date: "2022-07-26"
 tags: ["dagger", "ci/cd", "renovate", "dev"]
-draft: "true"
+draft: true
 ---
 
 Keeping project dependencies up-to-date is chore for every developer.\
@@ -37,6 +37,52 @@ You can easily get it from dockerhub in the latest version.
 ## how I use both tools together
 
 ### setup dagger
+
+The first step is to initialize a new `dagger project`.
+
+{{< highlight bash >}}
+dagger project init
+{{< /highlight >}}
+
+This command creates a `cue.mod/` directory inside your project.\
+This is where all the dagger files can be found.
+
+Next step is to create a custom dagger pipeline.\
+Create a new `*.cue` file - I like `ci.cue` for mine.\
+In this file we put all our custom code that describes\
+our jobs we want to run in this project.
+
+{{< highlight bash >}}
+touch ci.cue
+{{< /highlight >}}
+
+As said earlier dagger uses cuelang (a JSON superset) to describe\
+what we to do.
+
+Example:
+
+{{< highlight json >}}
+package ci
+
+import (
+    "dagger.io/dagger"
+)
+
+dagger.#Plan & {
+    actions: {
+        build: {
+        ... build job here
+        }
+    }
+}
+
+{{< /highlight >}}
+
+This job (if complete..) can now be run with
+
+{{< highlight bash >}}
+dagger do build
+{{< /highlight >}}
 
 ### setup renovate
 
