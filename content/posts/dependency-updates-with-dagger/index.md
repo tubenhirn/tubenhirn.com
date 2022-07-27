@@ -15,6 +15,23 @@ Combine `renovate` with `dagger` and you get a full managed CI/CD pipeline that 
 Dagger is a "portable devkit for CI/CD pipelines".\
 (for more details check the docs here https://docs.dagger.io/1200/local-dev)
 
+It uses docker to run portable job containers and is configured with cuelang.
+
+For me it is the perfect match for developer task automation and it can be used in\
+almost every environment.
+
+### whats renovate
+
+Renovate is a multi platform dependency update tool written in `Typescript`.\
+It is open source and provides a ton of features for many different languages.\
+(for more details check the docs here https://docs.renovatebot.com/)
+
+It can be run in many different ways. My preference is to use it as a docker container.\
+You can easily get it from dockerhub in the latest version.
+
+## how I use both tools together
+
+
 ## used tools
 
 - dagger (https://dagger.io/)
