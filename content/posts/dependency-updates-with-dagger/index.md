@@ -1,8 +1,8 @@
 ---
-title: "automate dependency updates with dagger"
-description: "automate project dependency updates with renovate and dagger"
+title: "Automate dependency updates with dagger"
+description: "automate project dependency updates with renovate and dagger and run it where ever you want"
 date: "2022-07-26"
-tags: ["dagger", "ci/cd", "renovate", "dev"]
+tags: ["dagger", "ci/cd", "renovate", "development", "cue", "docker"]
 draft: true
 ---
 
