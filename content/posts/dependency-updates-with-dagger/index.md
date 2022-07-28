@@ -56,18 +56,20 @@ our jobs we want to run in this project.
 touch ci.cue
 {{< /highlight >}}
 
-As said earlier dagger uses `cue` (a JSON superset) to describe\
-what we to do.
+As said earlier, dagger uses `cue` (a JSON superset) to describe\
+what to do.
 
 Example:
 
 {{< highlight json >}}
 package ci
 
+// import the required packages from dagger
 import (
     "dagger.io/dagger"
 )
 
+// "Plan" contains our jobs
 dagger.#Plan & {
     actions: {
         build: {
@@ -83,6 +85,7 @@ This job (if complete..) can now be run with
 {{< highlight bash >}}
 dagger do build
 {{< /highlight >}}
+
 
 ### setup renovate
 
