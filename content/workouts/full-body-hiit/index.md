@@ -1,8 +1,9 @@
 ---
 title: "Full Body, 14 exercises, 2 rounds"
-categories: ["hiit", "full body", "50/10", "2 rounds", "jumping"]
-date: "2022-05-27"
+categories: ["full body", "50/10", "2 rounds", "jumping"]
+date: "2022-07-28"
 author: "tstang"
+draft: true
 ---
 
 1. L/R Jumping Lunges + In and Out + 2x Sumo Jump Up
