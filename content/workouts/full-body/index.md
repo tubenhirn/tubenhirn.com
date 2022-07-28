@@ -5,7 +5,7 @@ date: "2022-07-28"
 author: "tstang"
 ---
 
-1. Front Run + Burpee + AAC Jump
+1. Front Run + Burpee + Tuck Jump
 1. 6x Dips + Crab
 1. In and Out Jumps + Hop
 1. Sea urchin
