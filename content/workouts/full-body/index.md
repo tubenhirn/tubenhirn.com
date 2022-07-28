@@ -3,7 +3,6 @@ title: "Full Body, 12 exercises, 2 rounds"
 categories: ["full body", "50/20", "2 rounds", "jumping", "no-pain-no-gain"]
 date: "2022-07-28"
 author: "tstang"
-draft: false
 ---
 
 1. Front Run + Burpee + AAC Jump
