@@ -11,9 +11,9 @@ author: "tstang"
 1. Sea urchin
 1. Burpee + Donkey Kick
 1. Side Plank + 3x Hip Dip + Knee Touch
-1. 5x Puls Squat + 1x Squat Jump
+1. 5x Pulse Squat + 1x Squat Jump
 1. 3x Lean Backs + 2x Get Ups 
 1. 5x Star Jumps (Plank position) + Front Jump
 1. Triceps Push Up
-1. 3x Sumo Squat + Jump + Tap Jump
+1. 3x Sumo Squat + Jump + Tuck Jump
 1. Hold Plank
