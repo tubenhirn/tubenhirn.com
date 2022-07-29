@@ -26,6 +26,13 @@ try and error commit/push loops when developing new pipelines or jobs.
 Dagger can be run on your local machine and speeds up the feedback cycle when developing new
 stuff.
 
+Install dagger (with `homebrew`):
+
+{{< highlight bash >}}
+brew tap dagger/tap
+brew install dagger
+{{< /highlight >}}
+
 ### whats renovate
 
 Renovate is a multi platform dependency update tool written in `Typescript`.\
@@ -149,3 +156,4 @@ actions: {
 - renovate (https://github.com/renovatebot/renovate)
 - cue (https://cuelang.org)
 - docker (https://www.docker.com)
+- homebrew (https://brew.sh)
