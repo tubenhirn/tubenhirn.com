@@ -29,6 +29,7 @@
           {{ now.Format "2006" }}
           {{ .Site.Author.name | markdownify | emojify }}
         {{- end }}
+        &nbsp;<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="/imprint">Imprint</a>
       </p>
       {{/* Theme attribution */}}
       {{ if .Site.Params.attribution | default true }}
