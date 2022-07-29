@@ -131,8 +131,16 @@ actions: {
 Now we got a image of renovate, time to use it.
 Therefor we use `docker run` and hand over the `_image`.
 
+Put it all together, an we got our first dagger pipeline.
+
 {{< highlight json >}}
-...
+package ci
+
+import (
+    "dagger.io/dagger"
+    "universe.dagger.io/docker"
+)
+
 actions: {
     renovate: {
         _image: docker.#Pull & {
@@ -143,7 +151,19 @@ actions: {
         }
     }
 }
-...
+{{< /highlight >}}
+
+Now we can run a local instance of `renovate`.
+
+
+{{< alert >}}
+To find out more about the `docker` package you can browse through the `cue-files`
+inside your project directory.\
+`./cue.mod/pkg/universe.dagger.io/docker`
+{{< /alert >}}
+
+{{< highlight bash >}}
+dagger do renovate
 {{< /highlight >}}
 
 ### setup renovate
