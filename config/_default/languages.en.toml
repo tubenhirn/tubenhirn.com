@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 [author]
   name = "Johannes Stang"
   image = "img/jstang2.png"
-  headline = "Developer, developing things."
+  headline = "Squeeze my brain and develop things."
   # bio = "nothing here"
   links = [
     # { email = "mailto:hello@your_domain.com" },
