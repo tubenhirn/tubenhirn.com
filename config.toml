@@ -11,7 +11,7 @@ paginate = 10
 summaryLength = 0
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "MANIFEST"]
+  home = ["HTML", "RSS", "JSON", "MANIFEST", "BROWSERCONFIG"]
 
 [outputFormats]
   [outputFormats.manifest]
