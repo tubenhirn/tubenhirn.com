@@ -17,12 +17,13 @@ Dagger is a "portable devkit for CI/CD pipelines".\
 
 It uses docker to run portable job containers and is configured with `cue`.
 
-I think it is the perfect match for developer task automation and it can be used in\
+I think it is the perfect match for developer task automation and it can be used in
 almost every environment.
 
-When you are used to CI/CD tools like `gitlab` or `github actions` you may be aware of the\
-try and error commit/push loops when developing new pipelines or jobs.\
-Dagger can be run on your local machine and speeds up the feedback cycle when developing new\
+When you are used to CI/CD tools like `gitlab` or `github actions` you may be aware of the
+try and error commit/push loops when developing new pipelines or jobs.
+
+Dagger can be run on your local machine and speeds up the feedback cycle when developing new
 stuff.
 
 ### whats renovate
@@ -32,7 +33,7 @@ It is open source and provides a ton of features for many different languages.\
 (for more details check the docs here https://docs.renovatebot.com/)
 
 It can be run in many different ways. My preference is to use it as a docker container.\
-You can easily get it from dockerhub in the latest version.
+You can easily get it from https://hub.docker.com/r/renovate/renovate in the `latest` version.
 
 ## how I use both tools together
 
@@ -49,8 +50,7 @@ This is where all the dagger files can be found.
 
 Next step is to create a custom dagger pipeline.\
 Create a new `*.cue` file - I like `ci.cue` for mine.\
-In this file we put all our custom code that describes\
-our jobs we want to run in this project.
+In this file we put all our custom code that describes our jobs we want to run in this project.
 
 {{< highlight bash >}}
 touch ci.cue
@@ -72,8 +72,8 @@ import (
 // "Plan" contains our jobs
 dagger.#Plan & {
     actions: {
-        build: {
-        ... build job here
+        mycustomjob: {
+        ... job here
         }
     }
 }
@@ -86,6 +86,41 @@ This job (if complete..) can now be run with
 dagger do build
 {{< /highlight >}}
 
+Now we know how a dagger pipeline looks like,\
+time to add our custom renovate job.
+
+The first thing we need to run our job is a fresh image of `renovate`.
+Dagger offers a prebuild package to handle `docker commands` with ease.
+
+Lets import this package
+
+{{< highlight json >}}
+package ci
+
+// import the required packages from dagger
+import (
+    "dagger.io/dagger"
+    "universe.dagger.io/docker"
+)
+{{< /highlight >}}
+
+Now we can use `docker commands` like `docker pull` inside our pipeline.
+
+We add a `renovate` job and pull the `:latest` image of `renovate`.\
+Save it to the `_image` local job variable.
+
+{{< highlight json >}}
+...
+actions: {
+    renovate: {
+        _image: docker.#Pull & {
+            source: "renovate/renovate:latest"
+        }
+    }
+}
+...
+{{< /highlight >}}
+
 
 ### setup renovate
 
@@ -96,4 +131,5 @@ dagger do build
 - dagger (https://dagger.io/)
 - renovate (https://github.com/renovatebot/renovate)
 - cue (https://cuelang.org/)
+- docker
 
