@@ -90,7 +90,7 @@ Now we know how a dagger pipeline looks like,\
 time to add our custom renovate job.
 
 The first thing we need to run our job is a fresh image of `renovate`.
-Dagger offers a prebuild package to handle `docker commands` with ease.
+Dagger brings a package to handle `docker commands` with ease.
 
 Lets import this package
 
@@ -121,6 +121,23 @@ actions: {
 ...
 {{< /highlight >}}
 
+Now we got a image of renovate, time to use it.
+Therefor we use `docker run` and hand over the `_image`.
+
+{{< highlight json >}}
+...
+actions: {
+    renovate: {
+        _image: docker.#Pull & {
+            source: "renovate/renovate:latest"
+        }
+        docker.#Run & {
+            input:  _image.output
+        }
+    }
+}
+...
+{{< /highlight >}}
 
 ### setup renovate
 
@@ -128,8 +145,7 @@ actions: {
 
 ## used tools
 
-- dagger (https://dagger.io/)
+- dagger (https://dagger.io)
 - renovate (https://github.com/renovatebot/renovate)
-- cue (https://cuelang.org/)
-- docker
-
+- cue (https://cuelang.org)
+- docker (https://www.docker.com)
