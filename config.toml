@@ -12,3 +12,15 @@ summaryLength = 0
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "MANIFEST"]
+
+[outputFormats]
+  [outputFormats.manifest]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/json"
+    notAlternative = "true"
+  [outputFormats.browserconfig]
+    name = "browserconfig"
+    baseName = "browserconfig"
+    mediaType = "application/xml"
+    notAlternative = "true"
