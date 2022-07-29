@@ -1,6 +1,6 @@
 ---
 title: "Welcome to tubenhirn.com! :tada:"
-description: "a developer, developing things"
+description: "Squeeze my brain and developing things"
 ---
 
 Welcome to tubenhirn.com!\
