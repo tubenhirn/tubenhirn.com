@@ -11,16 +11,4 @@ paginate = 10
 summaryLength = 0
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "MANIFEST", "BROWSERCONFIG"]
-
-[outputFormats]
-  [outputFormats.manifest]
-    name = "manifest"
-    baseName = "manifest"
-    mediaType = "application/json"
-    notAlternative = "true"
-  [outputFormats.browserconfig]
-    name = "browserconfig"
-    baseName = "browserconfig"
-    mediaType = "application/xml"
-    notAlternative = "true"
+  home = ["HTML", "RSS", "JSON"]
