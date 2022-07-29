@@ -4,4 +4,4 @@ description: "a developer, developing things"
 ---
 
 Welcome to tubenhirn.com!\
-I love automation and building stuff that makes developers live more easy.
+I love automation and building stuff that makes developers life more easy.
