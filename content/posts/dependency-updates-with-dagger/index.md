@@ -26,7 +26,7 @@ try and error commit/push loops when developing new pipelines or jobs.
 Dagger can be run on your local machine and speeds up the feedback cycle when developing new
 stuff.
 
-Install dagger (with `homebrew`):
+### install dagger (with `homebrew`)
 
 {{< highlight bash >}}
 brew tap dagger/tap
