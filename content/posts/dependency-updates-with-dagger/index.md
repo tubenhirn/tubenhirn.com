@@ -131,6 +131,23 @@ actions: {
 Now we got a image of renovate, time to use it.
 Therefor we use `docker run` and hand over the `_image`.
 
+To tell `renovate` what to do, we need to pass a few configuration values to the container before we can run it.
+
+`Dagger` is able to read values from the current users `environment`. This feature we can use to pass 
+values like an `authToken` or other sensible data to the container.
+
+{{< highlight json >}}
+...
+actions: {
+    renovate: {
+        _image: docker.#Pull & {
+            source: "renovate/renovate:latest"
+        }
+    }
+}
+...
+{{< /highlight >}}
+
 Put it all together, an we got our first dagger pipeline.
 
 {{< highlight json >}}
@@ -153,12 +170,6 @@ actions: {
 }
 {{< /highlight >}}
 
-Now we can run a local instance of `renovate`.
-
-{{< highlight bash >}}
-dagger do renovate
-{{< /highlight >}}
-
 {{< alert >}}
 To find out more about the `docker` package you can browse through the `cue-files`
 inside your project directory.\
@@ -167,7 +178,46 @@ inside your project directory.\
 
 ### setup renovate
 
-### run the renovate job
+To setup `renovate` we need to add a `renovate` configuration file to our project.
+
+I prefer a json file named `renovate.json`. 
+
+{{< highlight bash >}}
+touch renovate.json
+{{< /highlight >}}
+
+#### A basic configuration example
+
+{{< highlight json >}}
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    // the projects default branch we want our updates on
+    "baseBranches": ["main"],
+    "extends": [
+        // the basic renovate config template
+        "config:base", 
+        // I like semantic commits
+        ":semanticCommits", 
+        // I dont use the dependency dashboard
+        ":disableDependencyDashboard"
+    ],
+    // tell renovate to ignore the dagger folder
+    "ignorePaths": ["**/cue.mod/**"]
+}
+{{< /highlight >}}
+
+{{< alert >}}
+`renovate` accepts a wide range of configuration methods.
+Check the docs for more details https://docs.renovatebot.com/configuration-options/#configuration-options
+{{< /alert >}}
+
+### run renovate
+
+Now we can run a local instance of `renovate`.
+
+{{< highlight bash >}}
+dagger do renovate
+{{< /highlight >}}
 
 ## used tools
 
