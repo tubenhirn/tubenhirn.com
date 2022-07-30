@@ -99,7 +99,7 @@ time to add our custom renovate job.
 The first thing we need to run our job is a fresh image of `renovate`.
 Dagger brings a package to handle `docker commands` with ease.
 
-Lets import this package
+Lets import this package.
 
 {{< highlight json >}}
 package ci
@@ -155,16 +155,15 @@ actions: {
 
 Now we can run a local instance of `renovate`.
 
+{{< highlight bash >}}
+dagger do renovate
+{{< /highlight >}}
 
 {{< alert >}}
 To find out more about the `docker` package you can browse through the `cue-files`
 inside your project directory.\
 `./cue.mod/pkg/universe.dagger.io/docker`
 {{< /alert >}}
-
-{{< highlight bash >}}
-dagger do renovate
-{{< /highlight >}}
 
 ### setup renovate
 
