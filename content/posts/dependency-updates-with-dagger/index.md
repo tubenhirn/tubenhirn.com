@@ -4,6 +4,7 @@ description: "automate project dependency updates with renovate and dagger and r
 date: "2022-07-26"
 tags: ["dagger", "ci/cd", "renovate", "development", "cue", "docker"]
 draft: false
+showTableOfContents: true
 ---
 
 Keeping project dependencies up-to-date is chore for every developer.\
