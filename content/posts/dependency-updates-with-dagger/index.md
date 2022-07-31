@@ -44,6 +44,41 @@ You can easily get it from https://hub.docker.com/r/renovate/renovate in the `la
 
 ## how I use both tools together
 
+### setup renovate
+
+To setup `renovate` we need to add a `renovate` configuration file to our project.
+
+I prefer a json file named `renovate.json`. 
+
+{{< highlight bash >}}
+touch renovate.json
+{{< /highlight >}}
+
+#### A basic configuration example
+
+{{< highlight json >}}
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    // the projects default branch we want our updates on
+    "baseBranches": ["main"],
+    "extends": [
+        // the basic renovate config template
+        "config:base", 
+        // I like semantic commits
+        ":semanticCommits", 
+        // I dont use the dependency dashboard
+        ":disableDependencyDashboard"
+    ],
+    // tell renovate to ignore the dagger folder
+    "ignorePaths": ["**/cue.mod/**"]
+}
+{{< /highlight >}}
+
+{{< alert >}}
+`renovate` accepts a wide range of configuration methods.
+Check the docs for more details https://docs.renovatebot.com/configuration-options/#configuration-options
+{{< /alert >}}
+
 ### setup dagger
 
 The first step is to initialize a new `dagger project`.
@@ -200,41 +235,6 @@ https://docs.renovatebot.com
 To find out more about the `docker` package you can browse through the `cue-files`
 inside your project directory.\
 `./cue.mod/pkg/universe.dagger.io/docker`
-{{< /alert >}}
-
-### setup renovate
-
-To setup `renovate` we need to add a `renovate` configuration file to our project.
-
-I prefer a json file named `renovate.json`. 
-
-{{< highlight bash >}}
-touch renovate.json
-{{< /highlight >}}
-
-#### A basic configuration example
-
-{{< highlight json >}}
-{
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    // the projects default branch we want our updates on
-    "baseBranches": ["main"],
-    "extends": [
-        // the basic renovate config template
-        "config:base", 
-        // I like semantic commits
-        ":semanticCommits", 
-        // I dont use the dependency dashboard
-        ":disableDependencyDashboard"
-    ],
-    // tell renovate to ignore the dagger folder
-    "ignorePaths": ["**/cue.mod/**"]
-}
-{{< /highlight >}}
-
-{{< alert >}}
-`renovate` accepts a wide range of configuration methods.
-Check the docs for more details https://docs.renovatebot.com/configuration-options/#configuration-options
 {{< /alert >}}
 
 ### run renovate the first time
