@@ -3,7 +3,7 @@ title: "Automate dependency updates with dagger"
 description: "automate project dependency updates with renovate and dagger and run it where ever you want"
 date: "2022-07-26"
 tags: ["dagger", "ci/cd", "renovate", "development", "cue", "docker"]
-draft: true
+draft: false
 ---
 
 Keeping project dependencies up-to-date is chore for every developer.\
@@ -37,7 +37,7 @@ brew install dagger
 
 Renovate is a multi platform dependency update tool written in `Typescript`.\
 It is open source and provides a ton of features for many different languages.\
-(for more details check the docs here https://docs.renovatebot.com/)
+(for more details check the docs here https://docs.renovatebot.com)
 
 It can be run in many different ways. My preference is to use it as a docker container.\
 You can easily get it from https://hub.docker.com/r/renovate/renovate in the `latest` version.
@@ -133,19 +133,26 @@ Therefor we use `docker run` and hand over the `_image`.
 
 To tell `renovate` what to do, we need to pass a few configuration values to the container before we can run it.
 
-`Dagger` is able to read values from the current users `environment`. This feature we can use to pass 
-values like an `authToken` or other sensible data to the container.
+`Dagger` is able to read different types of values from the current `client` it is running on.
+This feature we can use to pass values like an `authToken` or other sensible data to the container.
+
+To read client `environment` variables you only need to export them.
+
+{{< highlight bash >}}
+export GITLAB_TOKEN=<GITLAB_API_TOKEN>
+export GITHUB_TOKEN=<GITHUB_API_TOKEN>
+{{< /highlight >}}
+
+Once done, we can read them with `dagger`.
 
 {{< highlight json >}}
-...
-actions: {
-    renovate: {
-        _image: docker.#Pull & {
-            source: "renovate/renovate:latest"
-        }
+dagger.#Plan & {
+    client: env: {
+        GITLAB_TOKEN: dagger.#Secret
+        GITHUB_TOKEN: dagger.#Secret
     }
+    ...
 }
-...
 {{< /highlight >}}
 
 Put it all together, an we got our first dagger pipeline.
@@ -158,19 +165,38 @@ import (
     "universe.dagger.io/docker"
 )
 
-actions: {
-    renovate: {
-        _image: docker.#Pull & {
-            source: "renovate/renovate:latest"
-        }
-        docker.#Run & {
+dagger.#Plan & {
+    client: env: {
+        GITLAB_TOKEN: dagger.#Secret
+        GITHUB_TOKEN: dagger.#Secret
+    }
+    actions: {
+        renovate: {
+            _image: docker.#Pull & {
+                source: "renovate/renovate:latest"
+            }
+            docker.#Run & {
             input:  _image.output
+                env: {
+                    // the access-token to access our project (gitlab project here)
+                    RENOVATE_TOKEN:                 client.env.GITLAB_TOKEN
+                    // a github access-token to access package updates and CHANGELOG on github
+                    GITHUB_COM_TOKEN:               client.env.GITHUB_TOKEN
+                    // tell renovate where your project is hostes (gitlab, github, bitbucket)
+                    RENOVATE_PLATFORM:              "gitlab"
+                    // the path of your project
+                    RENOVATE_REPOSITORIES:          "my/gitlab/projectpath"
+                }
+            }
         }
     }
 }
 {{< /highlight >}}
 
 {{< alert >}}
+To find out more about `RENOVATE_PLATFORM` and `RENOVATE_REPOSITORIES` check out the documentation
+https://docs.renovatebot.com
+
 To find out more about the `docker` package you can browse through the `cue-files`
 inside your project directory.\
 `./cue.mod/pkg/universe.dagger.io/docker`
@@ -211,7 +237,14 @@ touch renovate.json
 Check the docs for more details https://docs.renovatebot.com/configuration-options/#configuration-options
 {{< /alert >}}
 
-### run renovate
+### run renovate the first time
+
+Once we are finished with our new pipeline we have to download all the dependencies we defined
+inside the `import` statements.
+
+{{< highlight bash >}}
+dagger project update
+{{< /highlight >}}
 
 Now we can run a local instance of `renovate`.
 
