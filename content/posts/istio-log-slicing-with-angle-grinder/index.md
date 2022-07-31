@@ -3,6 +3,7 @@ title: "Istio log slicing with angle-grinder"
 description: "slice and dice istio logs with stern and angle-grinder"
 date: "2022-05-31"
 tags: ["istio", "logging", "shell"]
+draft: false
 ---
 
 For me `angle-grinder` is a handy tool when it comes to `istio` log-analysis.\
