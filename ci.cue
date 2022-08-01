@@ -11,7 +11,7 @@ import (
 dagger.#Plan & {
 	client: filesystem: ".": read: contents: dagger.#FS
 	client: env: {
-		ACCESS_TOKEN?:    dagger.#Secret
+		ACCESS_TOKEN:    dagger.#Secret
 	}
 
 	actions: {
@@ -40,6 +40,10 @@ dagger.#Plan & {
 			plan: terraform.#Plan & {
 				source: validate.output
 				cmdArgs: ["--var-file=live.tfvars"]
+				env: _tfenv
+			}
+			apply: terraform.#Apply & {
+				source: plan.output
 				env: _tfenv
 			}
 		}

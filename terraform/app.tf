@@ -17,9 +17,9 @@ resource "digitalocean_app" "tubenhirn-com" {
       build_command    = "hugo -d public"
       environment_slug = "hugo"
 
-      gitlab {
-        repo           = "jstang/tubenhirn.com"
-        branch         = "main"
+      github {
+        repo = "tubenhirn/tubenhirn.com"
+        branch = "main"
         deploy_on_push = true
       }
 
