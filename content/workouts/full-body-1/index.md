@@ -13,4 +13,4 @@ draft: false
 1. 10x Mountain Climbers + Plank Jump In (L/R/M)
 1. V-Up's (R)
 1. Half Burpee + Tuck Jump
-1. Pulse Squat + Squat Jump
+1. 3x Pulse Squat + Squat Jump
