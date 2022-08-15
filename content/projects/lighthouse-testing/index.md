@@ -4,6 +4,7 @@ description: "Use scheduled Gitlab pipelines to trigger lighthouse performance t
 tags: ["test", "lighthouse", "ci/cd", "cloud-sql", "gcp", "performance", "gitlab-ci", "k8s"]
 date : "2021-12-01"
 author: "jstang"
+draft: true
 ---
 
 Using lighthouse-ci together with Gitlab pipelines and custom Kubernetes runners
