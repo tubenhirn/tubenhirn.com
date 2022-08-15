@@ -11,7 +11,7 @@ import (
 dagger.#Plan & {
 	client: filesystem: ".": read: contents: dagger.#FS
 	client: env: {
-		ACCESS_TOKEN:    dagger.#Secret
+		ACCESS_TOKEN: dagger.#Secret
 	}
 
 	actions: {
@@ -26,7 +26,7 @@ dagger.#Plan & {
 
 		"deploy": {
 			_tfenv: {
-				TF_VAR_ACCESS_TOKEN:       client.env.ACCESS_TOKEN
+				TF_VAR_ACCESS_TOKEN: client.env.ACCESS_TOKEN
 			}
 			_tfSource: core.#Source & {
 				path: "./terraform"
@@ -44,7 +44,7 @@ dagger.#Plan & {
 			}
 			apply: terraform.#Apply & {
 				source: plan.output
-				env: _tfenv
+				env:    _tfenv
 			}
 		}
 	}
