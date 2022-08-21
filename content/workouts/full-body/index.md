@@ -8,7 +8,7 @@ author: "tstang"
 1. Front Run + Burpee + Tuck Jump
 1. 6x Dips + Crab
 1. In and Out Jumps + Hop
-1. Starfish
+1. Star Crunches
 1. Burpee + Donkey Kick
 1. Side Plank + 3x Hip Dip + Knee Touch
 1. 5x Pulse Squat + 1x Squat Jump
