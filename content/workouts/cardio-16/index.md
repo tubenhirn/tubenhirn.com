@@ -5,11 +5,11 @@ date: "2022-08-21"
 author: "tstang"
 ---
 
-1. 10x Front Tap + 10x Elbow to Knee Jump
+1. 10x Front Tap + 10x Elbow to Knee
 1. Under Knee Clap Crunches
 1. 10x Mountain Climbers + 3x Sumo Squat Jump
 1. Total Bicycle Crunch Up
-1. 20x Criss Cross + 20x Elbow to Knee
+1. 20x Criss Cross + 20x High Knees
 1. Plank Side Step + Crocodile Crunch
 1. Around the World Side Jumps
 1. Side Leg Let Downs
