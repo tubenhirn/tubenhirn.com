@@ -7,11 +7,11 @@
     {{ with .Site.Author.image }}
       {{ $authorImage := resources.Get . }}
       {{ if $authorImage }}
-        {{ $authorImage := $authorImage.Fill "288x288" }}
+        {{ $authorImage := $authorImage.Fill "576x576" }}
         <img
-          class="mb-2 rounded-full w-36 h-36"
-          width="144"
-          height="144"
+          class="mb-2 rounded-full"
+          width="288"
+          height="288"
           alt="Author"
           src="{{ $authorImage.RelPermalink }}"
         />
