@@ -1,5 +1,5 @@
 ---
-title: "Gymnastics, 16 exercises"
+title: "Gymnastics, 14 exercises, 2 rounds"
 categories: ["gymnastic", "50/20", "2 rounds", "no-jumping"]
 date: "2022-10-06"
 author: "tstang"
