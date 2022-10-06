@@ -8,7 +8,7 @@ author: "tstang"
 1. Squat 3x pulsing
 1. Sideplank (R)
 1. Sidecrunch (L)
-1. Supermanns
+1. Supermans
 1. Sideplank (L)
 1. Sidecrunche (R)
 1. Hip thrust
