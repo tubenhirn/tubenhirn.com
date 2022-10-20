@@ -2,4 +2,3 @@
 /public
 .hugo*
 /terraform/.terraform
-/terraform/.terraform.lock.hcl
