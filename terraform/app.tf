@@ -18,8 +18,8 @@ resource "digitalocean_app" "tubenhirn-com" {
       environment_slug = "hugo"
 
       github {
-        repo = "tubenhirn/tubenhirn.com"
-        branch = "main"
+        repo           = "tubenhirn/tubenhirn.com"
+        branch         = "main"
         deploy_on_push = true
       }
 

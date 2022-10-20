@@ -1,5 +1,6 @@
 variable "ACCESS_TOKEN" {
-  type = string
+  type        = string
+  description = "a access token"
 }
 
 variable "REGION" {
