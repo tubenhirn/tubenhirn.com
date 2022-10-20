@@ -4,8 +4,9 @@ variable "ACCESS_TOKEN" {
 }
 
 variable "REGION" {
-  type    = string
-  default = "ams"
+  type        = string
+  default     = "ams"
+  description = "the region"
 }
 
 variable "APP_NAME" {
