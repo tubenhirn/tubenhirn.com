@@ -23,7 +23,7 @@ links = [
     # { kickstarter = "https://www.kickstarter.com/profile/username" },
     # { lastfm = "https://lastfm.com/user/username" },
     # { linkedin = "https://linkedin.com/in/username" },
-    # { mastodon = "https://mastodon.instance/@username" },
+    { mastodon = "https://hachyderm.io/@tubenhirn" },
     # { medium = "https://medium.com/username" },
     # { microsoft = "https://www.microsoft.com/" },
     # { orcid = "https://orcid.org/userid" },
@@ -40,7 +40,7 @@ links = [
     # { tiktok = "https://tiktok.com/@username" },
     # { tumblr = "https://username.tumblr.com" },
     # { twitch = "https://twitch.tv/username" },
-    { twitter = "https://twitter.com/tubenhirn" },
+    # { twitter = "https://twitter.com/tubenhirn" },
     # { whatsapp = "https://wa.me/phone-number" },
     # { youtube = "https://youtube.com/username" },
 ]
