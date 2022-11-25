@@ -5,7 +5,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.3.5 |
 | <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | ~> 2.0 |
 
 ## Providers

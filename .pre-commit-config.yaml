@@ -14,6 +14,3 @@ repos:
       - --args=--skip-path=cue.mod
     - id: terraform_providers_lock
     - id: tfupdate
-    - id: tfupdate
-      args:
-        - --args=provider digitalocean
