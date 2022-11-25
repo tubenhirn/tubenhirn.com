@@ -3,7 +3,6 @@ repos:
   rev: v1.75.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
   hooks:
     - id: terraform_tflint
-    # - id: terraform_validate
     - id: terraform_fmt
     - id: terraform_docs
       args:
@@ -12,12 +11,7 @@ repos:
       - --hook-config=--create-file-if-not-exist=true # Boolean. true or false
     - id: terraform_checkov
     - id: terraform_providers_lock
-    # - id: terraform_tfsec
-    # - id: terrascan
+    - id: tfupdate
     - id: tfupdate
       args:
-      - --args=--version 1.2.7
-    # - id: infracost_breakdown
-    #   args:
-    #     - --args=--path=.
-    #   verbose: true
+        - --args=provider digitalocean
