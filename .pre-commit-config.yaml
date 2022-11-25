@@ -10,6 +10,8 @@ repos:
       - --hook-config=--add-to-existing-file=true     # Boolean. true or false
       - --hook-config=--create-file-if-not-exist=true # Boolean. true or false
     - id: terraform_checkov
+      args:
+      - --args=--skip-path=cue.mod
     - id: terraform_providers_lock
     - id: tfupdate
     - id: tfupdate
