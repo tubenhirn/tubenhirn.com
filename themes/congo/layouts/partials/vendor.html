@@ -1,3 +1,11 @@
+{{/* Lottie */}}
+{{ if .Page.HasShortcode "lottie" }}
+  {{ $lottieLib := resources.Get "lib/lottie/lottie.min.js" }}
+  {{ $lottieConfig := resources.Get "js/lottie.js" }}
+  {{ $lottieConfig := $lottieConfig | resources.Minify }}
+  {{ $lottieJS := slice $lottieLib $lottieConfig | resources.Concat "js/lottie.bundle.js" | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $lottieJS.RelPermalink }}" integrity="{{ $lottieJS.Data.Integrity }}"></script>
+{{ end }}
 {{/* Mermaid */}}
 {{ if .Page.HasShortcode "mermaid" }}
   {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
