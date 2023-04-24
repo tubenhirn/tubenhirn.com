@@ -34,7 +34,7 @@
     "fuse.js": "6.6.2",
     "katex": "0.16.6",
     "mermaid": "10.1.0",
-    "prettier": "2.8.7",
+    "prettier": "2.8.8",
     "prettier-plugin-go-template": "0.0.13",
     "rimraf": "4.4.1",
     "tailwindcss": "3.3.1",
