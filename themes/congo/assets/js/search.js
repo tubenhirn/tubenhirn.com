@@ -1,5 +1,5 @@
 var fuse;
-var showButton = document.getElementById("search-button");
+var showButtons = document.querySelectorAll("[id^='search-button']");
 var hideButton = document.getElementById("close-search-button");
 var wrapper = document.getElementById("search-wrapper");
 var modal = document.getElementById("search-modal");
@@ -12,7 +12,9 @@ var indexed = false;
 var hasResults = false;
 
 // Listen for events
-showButton.addEventListener("click", displaySearch);
+showButtons.forEach((button) => {
+  button.addEventListener("click", displaySearch);
+});
 hideButton.addEventListener("click", hideSearch);
 wrapper.addEventListener("click", hideSearch);
 modal.addEventListener("click", function (event) {
@@ -107,6 +109,7 @@ function fetchJSON(path, callback) {
 
 function buildIndex() {
   var baseURL = wrapper.getAttribute("data-url");
+  baseURL = baseURL.replace(/\/?$/, "/");
   fetchJSON(baseURL + "index.json", function (data) {
     var options = {
       shouldSort: true,
@@ -130,21 +133,19 @@ function executeQuery(term) {
   let resultsHTML = "";
 
   if (results.length > 0) {
-    results.forEach(function (value, key) {
-      resultsHTML =
-        resultsHTML +
-        `<li class="mb-2">
-          <a class="flex items-center px-3 py-2 rounded-md appearance-none bg-neutral-100 dark:bg-neutral-700 focus:bg-primary-100 hover:bg-primary-100 dark:hover:bg-primary-900 dark:focus:bg-primary-900 focus:outline-dotted focus:outline-transparent focus:outline-2" href="${value.item.permalink}" tabindex="0">
-            <div class="grow">
-              <div class="-mb-1 text-lg font-bold">${value.item.title}</div>
-              <div class="text-sm text-neutral-500 dark:text-neutral-400">${value.item.section}<span class="px-2 text-primary-500">&middot;</span>${value.item.date}</span></div>
-              <div class="text-sm italic">${value.item.summary}</div>
-            </div>
-            <div class="ml-2 ltr:block rtl:hidden text-neutral-500">&rarr;</div>
-            <div class="mr-2 ltr:hidden rtl:block text-neutral-500">&larr;</div>
-          </a>
-        </li>`;
-    });
+    resultsHTML = results.map(function (value, key) {
+      return `<li class="mb-2">
+        <a class="flex items-center px-3 py-2 rounded-md appearance-none bg-neutral-100 dark:bg-neutral-700 focus:bg-primary-100 hover:bg-primary-100 dark:hover:bg-primary-900 dark:focus:bg-primary-900 focus:outline-dotted focus:outline-transparent focus:outline-2" href="${value.item.permalink}" tabindex="0">
+          <div class="grow">
+            <div class="-mb-1 text-lg font-bold">${value.item.title}</div>
+            <div class="text-sm text-neutral-500 dark:text-neutral-400">${value.item.section}${value.item.date == null ? '' : `<span class="px-2 text-primary-500">&middot;</span>${value.item.date}</span>`}</div>
+            <div class="text-sm italic">${value.item.summary}</div>
+          </div>
+          <div class="ml-2 ltr:block rtl:hidden text-neutral-500">&rarr;</div>
+          <div class="mr-2 ltr:hidden rtl:block text-neutral-500">&larr;</div>
+        </a>
+      </li>`;
+    }).join("");
     hasResults = true;
   } else {
     resultsHTML = "";

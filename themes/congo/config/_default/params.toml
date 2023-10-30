@@ -8,18 +8,30 @@
 colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
-showAppearanceSwitcher = false
 
 enableSearch = false
 enableCodeCopy = false
+enableImageLazyLoading = true
 
-# mainSections = ["section1", "section2"]
 # robots = ""
-showScrollToTop = true
+fingerprintAlgorithm = "sha256"
+
+[header]
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  # logo = "img/logo.jpg"
+  # logoDark = "img/dark-logo.jpg"
+  showTitle = true
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = false
+  showScrollToTop = true
 
 [homepage]
   layout = "page" # valid options: page, profile, custom
   showRecent = false
+  recentLimit = 5
 
 [article]
   showDate = true
@@ -37,13 +49,16 @@ showScrollToTop = true
   showTableOfContents = false
   showTaxonomies = false
   showWordCount = false
-  # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
+  showComments = false
+  # sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "reddit", "linkedin", "email"]
 
 [list]
   showBreadcrumbs = false
   showSummary = false
   showTableOfContents = false
+  showTaxonomies = false
   groupByYear = true
+  paginationWidth = 1
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
@@ -54,6 +69,11 @@ showScrollToTop = true
 [fathomAnalytics]
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
+
+[plausibleAnalytics]
+  # domain = "blog.yoursite.com"
+  # event = ""
+  # script = ""
 
 [verification]
   # google = ""
