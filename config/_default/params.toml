@@ -20,6 +20,12 @@ enableCodeCopy = true
   layout = "profile" # valid options: page, profile, custom
   showRecent = false
 
+[header]
+  layout = "hamburger" # valid options: basic, hamburger, hybrid, custom
+  # logo = "img/logo.jpg"
+  # logoDark = "img/dark-logo.jpg"
+  showTitle = true
+
 [footer]
   showCopyright = true
   showThemeAttribution = true
