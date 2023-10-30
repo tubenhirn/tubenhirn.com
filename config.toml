@@ -13,6 +13,7 @@ summaryLength = 0
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
+# additional hugo server config
 [[headers]]
   for = "/*"
     [headers.values]
