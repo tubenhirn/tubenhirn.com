@@ -8,18 +8,30 @@
 colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
-showAppearanceSwitcher = true
 
 enableSearch = true
 enableCodeCopy = true
+enableImageLazyLoading = true
 
-mainSections = ["samples"]
 # robots = ""
-showScrollToTop = true
+fingerprintAlgorithm = "sha256"
+
+[header]
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  # logo = "img/logo.jpg"
+  # logoDark = "img/dark-logo.jpg"
+  showTitle = true
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
 
 [homepage]
   layout = "custom" # valid options: page, profile, custom
   showRecent = true
+  recentLimit = 5
 
 [article]
   showDate = true
@@ -37,13 +49,16 @@ showScrollToTop = true
   showTableOfContents = true
   showTaxonomies = false
   showWordCount = false
-  # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
+  showComments = false
+  # sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "reddit", "linkedin", "email"]
 
 [list]
   showBreadcrumbs = true
   showSummary = false
   showTableOfContents = true
+  showTaxonomies = false
   groupByYear = false
+  paginationWidth = 1
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]

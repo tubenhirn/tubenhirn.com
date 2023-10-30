@@ -3,6 +3,7 @@ title: "What's New in 2.0 ✨"
 date: 2022-01-19
 draft: false
 description: "Discover what's new in Congo version 2.0."
+summary: "Version 2 takes Congo to new heights, making the theme even more powerful while still maintaining its lightweight footprint."
 tags: ["new", "docs"]
 ---
 
@@ -28,7 +29,7 @@ A highly requested feature, Congo is now multilingual! If you publish your conte
 
 <div class="text-2xl text-center" style="font-size: 2.8rem">:gb: :de: :fr: :es: :cn: :brazil: :tr: :bangladesh:</div>
 
-Thanks to submissions from the community, Congo has already been translated into [eight languages](https://github.com/jpanther/congo/tree/dev/i18n) with more to be added over time. By the way, [pull requests](https://github.com/jpanther/congo/pulls) for new languages are always welcome!
+Thanks to submissions from the community, Congo has already been translated into [23 languages](https://github.com/jpanther/congo/tree/dev/i18n) with more to be added over time. By the way, [pull requests](https://github.com/jpanther/congo/pulls) for new languages are always welcome!
 
 ## RTL language support
 
