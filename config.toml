@@ -3,7 +3,6 @@
 # https://jpanther.github.io/congo/docs/getting-started/
 
 baseURL = "https://tubenhirn.com/"
-defaultContentLanguage = "en"
 theme = "congo"
 
 enableRobotsTXT = true
