@@ -8,7 +8,6 @@
 colorScheme = "congo"
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = false
-showAppearanceSwitcher = true
 attribution = false
 
 enableSearch = true
@@ -16,11 +15,16 @@ enableCodeCopy = true
 
 # mainSections = ["section1", "section2"]
 # robots = ""
-showScrollToTop = true
 
 [homepage]
   layout = "profile" # valid options: page, profile, custom
   showRecent = false
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
 
 [article]
   showDate = true

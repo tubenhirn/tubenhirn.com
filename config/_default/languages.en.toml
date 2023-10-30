@@ -1,16 +1,14 @@
 languageCode = "en"
 languageName = "English"
-displayName = "EN"
-isoCode = "en"
 weight = 1
-rtl = false
+languageDirection = "ltr"
 
 title = "tubenhirn.com"
 # logo = "img/logo.jpg"
-description = "tubenhirn.com"
+# description = "tubenhirn.com"
 copyright = "2023 © Johannes Stang. All Right Reserved."
 
-dateFormat = "2 January 2006"
+# dateFormat = "2 January 2006"
 [author]
   name = "Johannes Stang"
   image = "img/jstang3.jpg"
