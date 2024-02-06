@@ -4,7 +4,7 @@ languageDirection = "ltr"
 weight = 1
 
 title = "tubenhirn.com"
-copyright = "2023 © Johannes Stang. All Right Reserved."
+copyright = "2024 © Johannes Stang. All Right Reserved."
 
 [params]
   dateFormat = "2 January 2006"
