@@ -10,15 +10,17 @@ Pyramid:
 - each round adds an additional exercise starting with only one
 - when n is reached remove one execercise every round
 
-1
-12
-123
-1234
-12345
-1234
-123
-12
-1
+### example
+
+1. 1
+1. 12
+1. 123
+1. 1234
+1. 12345
+1. 1234
+1. 123
+1. 12
+1. 1
 
 ## first round
 1. Jumpin Jacks 
