@@ -10,6 +10,16 @@ Pyramid:
 - each round adds an additional exercise starting with only one
 - when n is reached remove one execercise every round
 
+1\n
+12\n
+123\n
+1234\n
+12345\n
+1234\n
+123\n
+12\n
+1\n
+
 ## first round
 1. Jumpin Jacks 
 1. Squat
