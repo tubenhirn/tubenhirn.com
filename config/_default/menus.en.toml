@@ -25,6 +25,12 @@
   pageRef = "tags"
   weight = 30
 
+[[main]]
+  name = "Imprint"
+  pageRef = "imprint"
+  weight = 40
+
+
 # [[main]]
 #   name = "Categories"
 #   pageRef = "categories"
@@ -36,6 +42,6 @@
 # the copyright notice. Configure as per the main menu above.
 
 # [[footer]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 10
+#   name = "Imprint"
+#   pageRef = "imprint"
+#   weight = 20
