@@ -2,7 +2,6 @@
 title: "butter chicken tofu"
 description: "a recipe for indian butter chicken with tofu"
 date: "2025-01-04"
-tags: ["recipe", "tofu"]
 draft: false
 showTableOfContents: false
 ---
