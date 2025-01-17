@@ -22,7 +22,3 @@ showTableOfContents: false
 Die Milch mit Zucker, Vanillezucker und einer Prise Salz in einem weiten Topf zum Kochen bringen. Den Weizengrieß unter Rühren mit einem Schneebesen einrieseln lassen und nochmals aufkochen lassen. Dann den Topf vom Herd nehmen und den Grieß zugedeckt 5 Minuten ziehen lassen.
 
 In der Zwischenzeit das Eigelb vom Eiweiß trennen. Das Eiweiß zu steifem Schnee schlagen. Das Eigelb in den Grießbrei rühren. Die Butter ebenfalls in den Grießbrei geben und so lange rühren, bis die Butter geschmolzen ist. Zum Schluss den Eischnee vorsichtig unter den fertigen Grießbrei heben.
-
-Dazu schmeckt Kompott nach Wahl, Zimt und Zucker oder braune Butter.
-
-So hat ihn meine Omi gemacht und ich liebe diesen luftig lockeren Grießbrei. 
