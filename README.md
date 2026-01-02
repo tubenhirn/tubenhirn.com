@@ -1,4 +1,4 @@
-# a simple hugo based project
+# a simple hugo based project for me
 
 provides everything for https://tubenhirn.com
 
